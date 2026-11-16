@@ -15,11 +15,18 @@ class TestEmergencias < Minitest::Test
     assert_equal :triaje, area.tipo
     assert_equal 2, area.capacidad
   end
-  
+
   def test_personal_initialization
-      medico = Emergencias::Personal.new("Dra. García", :medico)
-      assert_equal "Dra. García", medico.nombre
-      assert_equal :medico, medico.categoria
-      assert medico.disponible
+    medico = Emergencias::Personal.new("Dra. García", :medico)
+    assert_equal "Dra. García", medico.nombre
+    assert_equal :medico, medico.categoria
+    assert medico.disponible
+  end
+
+  def test_vehiculo_initialization
+    heli = Emergencias::Vehiculo.new("HELI-01", :helicoptero)
+    assert_equal "HELI-01", heli.identificador
+    assert_equal :helicoptero, heli.tipo
+    assert heli.disponible
   end
 end
