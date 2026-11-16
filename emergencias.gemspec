@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["Carlos Torres"]
   spec.email = ["alu0101723358@ull.edu.es"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "DSL interno para la gestión de recursos en servicios de atención de emergencias."
+  spec.description = "Gema Ruby para modelar áreas de atención, personal y vehículos sanitarios dentro de un servicio de urgencias."
+  spec.homepage = "https://github.com/ULL-ESIT-LPP-2627"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
@@ -37,4 +37,8 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  #
+  spec.add_development_dependency "minitest", "~> 5.0"
+  spec.add_development_dependency "simplecov", "~> 0.22"
+  spec.add_development_dependency "rdoc", "~> 6.0"
 end

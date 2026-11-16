@@ -1,0 +1,42 @@
+PATH
+  remote: .
+  specs:
+    emergencias (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    date (3.6.0)
+    docile (1.4.1)
+    erb (6.0.7)
+    minitest (5.27.0)
+    psych (5.5.0)
+      date
+      stringio
+    rake (13.4.2)
+    rdoc (6.17.0)
+      erb
+      psych (>= 4.0.0)
+      tsort
+    simplecov (0.22.0)
+      docile (~> 1.1)
+      simplecov-html (~> 0.11)
+      simplecov_json_formatter (~> 0.1)
+    simplecov-html (0.13.2)
+    simplecov_json_formatter (0.1.4)
+    stringio (3.2.0)
+    tsort (0.2.0)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  emergencias!
+  minitest (~> 5.16)
+  rake (~> 13.0)
+  rdoc (~> 6.0)
+  simplecov (~> 0.22)
+
+BUNDLED WITH
+   2.5.22
