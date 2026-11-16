@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require "test_helper"
 
 class TestEmergencias < Minitest::Test
@@ -7,7 +5,14 @@ class TestEmergencias < Minitest::Test
     refute_nil ::Emergencias::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_error_class_exists
+    assert_kind_of Class, Emergencias::Error
+  end
+
+  def test_area_atencion_initialization
+    area = Emergencias::AreaAtencion.new("Sala de Triaje", :triaje, 2)
+    assert_equal "Sala de Triaje", area.nombre
+    assert_equal :triaje, area.tipo
+    assert_equal 2, area.capacidad
   end
 end
