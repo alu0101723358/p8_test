@@ -15,4 +15,11 @@ class TestEmergencias < Minitest::Test
     assert_equal :triaje, area.tipo
     assert_equal 2, area.capacidad
   end
+  
+  def test_personal_initialization
+      medico = Emergencias::Personal.new("Dra. García", :medico)
+      assert_equal "Dra. García", medico.nombre
+      assert_equal :medico, medico.categoria
+      assert medico.disponible
+  end
 end
