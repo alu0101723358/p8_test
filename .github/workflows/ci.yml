@@ -1,0 +1,24 @@
+name: CI Emergendias DSL
+
+on:
+  push:
+    branches: [ "**" ]
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v4
+
+    - name: Configurar Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.3'
+        bundler-cache: true # Ejecuta 'bundle install' automáticamente y cachea gemas
+
+    - name: Ejecutar pruebas y verificar cobertura
+      run: bundle exec rake test
